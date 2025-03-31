@@ -21,14 +21,13 @@ function FinalExam({ onPass, onFail }) {
       onPass();
     } else {
       alert('Você não atingiu 70%. Sua nota foi ' + score + '%. Tente novamente.');
-
       onFail();
     }
   };
 
   const handleVisibilityChange = () => {
     if (document.hidden) {
-      alert("Você saiu da prova final! A prova será reiniciada.");
+      alert('Você saiu da prova final! A prova será reiniciada.');
       onFail();
     }
   };
@@ -48,10 +47,10 @@ function FinalExam({ onPass, onFail }) {
           <p>{q.question}</p>
           {q.options.map((option, idx) => (
             <label key={idx}>
-              <input 
-                type="radio" 
-                name={\`final-question-\${index}\`} 
-                value={option} 
+              <input
+                type="radio"
+                name={'final-question-' + index}
+                value={option}
                 onChange={() => handleOptionChange(index, option)}
                 disabled={submitted}
               />
