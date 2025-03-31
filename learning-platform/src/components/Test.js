@@ -20,7 +20,7 @@ function Test({ questions, onComplete, onInactivity }) {
 
   const handleVisibilityChange = () => {
     if (document.hidden) {
-      alert("Você saiu da prova! O módulo será reiniciado.");
+      alert('Você saiu da prova! O módulo será reiniciado.');
       onInactivity();
     }
   };
@@ -42,7 +42,7 @@ function Test({ questions, onComplete, onInactivity }) {
             <label key={idx}>
               <input 
                 type="radio" 
-                name={\`question-\${index}\`} 
+                name={'question-' + index} 
                 value={option} 
                 onChange={() => handleOptionChange(index, option)} 
                 disabled={submitted}
