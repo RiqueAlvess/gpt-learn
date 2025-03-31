@@ -17,7 +17,7 @@ function FinalExam({ onPass, onFail }) {
     const score = (correct / finalExamQuestions.length) * 100;
     setSubmitted(true);
     if (score >= 70) {
-      alert(\`Parabéns! Você passou na prova final com \${score}%\`);
+      alert('Parabéns! Você passou na prova final com ' + score + '%');
       onPass();
     } else {
       alert(\`Você não atingiu 70%. Sua nota foi \${score}%. Tente novamente.\`);
