@@ -20,7 +20,8 @@ function FinalExam({ onPass, onFail }) {
       alert('Parabéns! Você passou na prova final com ' + score + '%');
       onPass();
     } else {
-      alert(\`Você não atingiu 70%. Sua nota foi \${score}%. Tente novamente.\`);
+      alert('Você não atingiu 70%. Sua nota foi ' + score + '%. Tente novamente.');
+
       onFail();
     }
   };
